@@ -14,6 +14,10 @@ app.get("/", (req: Request, res: Response): any => {
   return res.send(`Welcome to our node and postgres API`);
 });
 
+app.get("/test", (req: Request, res: Response): any => {
+  return res.send(`Welcome to test`);
+});
+
 const startServer = async () => {
   try {
     const client = await pool.connect();
